@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ajax 1 Text File</title>
+</head>
+<body>
+    <p id="error"></p>
+    <p id="text"></p>
+
+<input type="button" id="button"value="Get data file">
+<script>
+    document.getElementById("button").addEventListener("click", loadText);
+    function loadText(){
+        var xhr = new XMLHttpRequest();
+        // OPEN --type url asyn
+        xhr.open("GET", "sample2.txt", true)
+
+
+
+        /* xhr.onprogress = function(){
+            console.log("progressing")
+        } */
+        xhr.onload = function (){
+            if(this.status  == 200){
+              document.getElementById("text").innerHTML = this.responseText;
+            }
+            else if(this.status  == 404){
+              document.getElementById("text").innerHTML = "not found";
+            }      
+        }
+
+        xhr.onerror = function () {
+                console.log("Error loading resources...");
+            }
+
+        xhr.send()
+    }
+</script>
+</body>
+</html> 

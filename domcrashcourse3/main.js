@@ -7,7 +7,7 @@ var select = document.querySelector('select');
 // itemInput.addEventListener('keypress', runEvent);
 //itemInput.addEventListener('keydown', runEvent);
 function runEvent(e){
-  userInput = e.target.value;  
+  userInput = e.target.value.toLowerCase();  
   if (e.target.value.length < 3){
     errorinfo = `Your Username Cannot be less that 4 Characters`;
   }

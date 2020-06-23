@@ -205,10 +205,12 @@ var box = document.getElementById('box');
 //button.addEventListener('mousedown', runEvent);
 //button.addEventListener('mouseup', runEvent);
 
-box.addEventListener('mouseenter', runEvent);
+/*box.addEventListener('mouseenter', runEvent);
 function runEvent(e){
   console.log('EVENT TYPE: '+e.type);
 }
+
+*/
 //box.addEventListener('mouseleave', runEvent);
 
 //box.addEventListener('mouseover', runEvent);
@@ -220,9 +222,27 @@ var itemInput = document.querySelector('input[type="text"]');
 var form = document.querySelector('form');
 var select = document.querySelector('select');
 
-// itemInput.addEventListener('keydown', runEvent);
+ //itemInput.addEventListener('keypress', runEvent);
 // itemInput.addEventListener('keyup', runEvent);
 // itemInput.addEventListener('keypress', runEvent);
+//itemInput.addEventListener('keydown', runEvent);
+
+/*
+function runEvent(e){
+  userInput = e.target.value;  
+  if (e.target.value.length < 3){
+    errorinfo = `Your Username Cannot be less that 4 Characters`;
+  }
+  else{
+    errorinfo = ``;
+  };
+ 
+  document.getElementById('form-information').innerText = userInput;
+  document.getElementById('errorinfo').innerText = errorinfo;
+ 
+};
+*/
+
 
 // itemInput.addEventListener('focus', runEvent);
 // itemInput.addEventListener('blur', runEvent);
@@ -234,13 +254,14 @@ var select = document.querySelector('select');
 
 // select.addEventListener('change', runEvent);
 // select.addEventListener('input', runEvent);
-/*
+
 form.addEventListener('submit', runEvent);
 
 function runEvent(e){
   e.preventDefault();
   console.log('EVENT TYPE: '+e.type);
-*/
+}
+
   //console.log(e.target.value);
   // document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
 
